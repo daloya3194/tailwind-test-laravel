@@ -103,6 +103,14 @@
                 <div class="swiper-button-prev"></div>
                 {{--            <div class="swiper-pagination"></div>--}}
             </div>
+
+
+            <br>
+            <a href="{{ route('get-pdf') }}" target="_blank">Get PDF</a>
+            <br>
+            <br>
+            <br>
+            <br>
         </div>
 
         @livewireScripts
