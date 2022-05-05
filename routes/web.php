@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,3 +19,11 @@ Route::get('/', function () {
 });
 
 Route::get('/pdf', [\App\Http\Controllers\GeneratePdfController::class, 'show'])->name('get-pdf');
+
+Route::post('/test', function (Request $request) {
+    $data = \Illuminate\Support\Facades\Validator::make($request->all(), [
+        'tel' => 'required',
+        'valid' => 'accepted',
+    ])->validate();
+    dd($data);
+})->name('test');
